@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 from stories import stories
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 app.config['SECRET_KEY'] = "secret"
 
-debug = DebugToolbarExtension(app)
+# debug = DebugToolbarExtension(app)
 
 
 @app.route("/")
